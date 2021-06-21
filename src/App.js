@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container, AppBar, Typography, Grow, Grid} from '@material-ui/core'
+import memories from './images/memories.png'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxwidth="lg">
+      <AppBar position="static" color="inherit">
+        <Typography variant="h2" align="center">Memories</Typography>
+        <img src={memories} alt="memories" height="60" />
+      </AppBar>
+    </Container>
   );
 }
 
