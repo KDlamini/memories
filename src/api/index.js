@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:4000/posts';
+const url = 'https://memories-mern-project505.herokuapp.com/posts';
 
 const headers = {
     'Content-Type': 'application/json',
@@ -11,3 +11,9 @@ const headers = {
 export const fecthPosts = () => axios.get(url);
 
 export const createPost = (newPost) => axios.post(url, newPost, { headers: headers});
+
+export const updatePost = (id, updatedPost) => axios.patch(`${url}/${id}`, updatedPost);
+
+export const deletePost = (id) => axios.delete(`${url}/${id}`);
+
+export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
